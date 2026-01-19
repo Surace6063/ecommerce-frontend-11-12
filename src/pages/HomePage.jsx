@@ -6,6 +6,7 @@ const HomePage = () => {
   return (
     <MaxWidthContainer>
         <HeroSection />
+        <h1>New arrivals</h1>
         <NewArrivals />
     </MaxWidthContainer>
   )
