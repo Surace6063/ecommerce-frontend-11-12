@@ -1,0 +1,34 @@
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import MaxWidthContainer from "./ui/maxwidthcontainer";
+import { ShoppingCart } from "lucide-react";
+
+const Navbar = () => {
+  return (
+    <div className="border-b border-border py-4">
+      <MaxWidthContainer className="flex items-center justify-between">
+        {/* logo */}
+        <div className="flex gap-10 items-center">
+          <div className="flex gap-0.5 items-center">
+            <img src="logo.png" alt="logo" className="size-8" />
+            <span className="font-bold text-gray-800 text-lg">
+              E<span className="text-primary">Shop</span>
+            </span>
+          </div>
+          {/* <Input /> */}
+        </div>
+
+        {/* right */}
+        <div className="flex items-center gap-6">
+          <div className="space-x-4">
+            <Button variant="outline">sign in</Button>
+            <Button>sign up</Button>
+          </div>
+
+          <ShoppingCart className="text-gray-700" />
+        </div>
+      </MaxWidthContainer>
+    </div>
+  );
+};
+export default Navbar;
