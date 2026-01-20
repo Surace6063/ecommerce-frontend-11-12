@@ -1,3 +1,4 @@
+import AuthDialog from "./AuthDialog";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import MaxWidthContainer from "./ui/maxwidthcontainer";
@@ -21,8 +22,7 @@ const Navbar = () => {
         {/* right */}
         <div className="flex items-center gap-6">
           <div className="space-x-4">
-            <Button variant="outline">sign in</Button>
-            <Button>sign up</Button>
+            <AuthDialog />
           </div>
 
           <ShoppingCart className="text-gray-700" />
