@@ -12,7 +12,7 @@ const ProductPage = () => {
         <h1 className="text-2xl font-semibold text-gray-900">Product list</h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-6">
         {isPending ? (
           [...Array(8)].map((_, index) => <ProductCardSkeleton key={index} />)
         ) : error ? (

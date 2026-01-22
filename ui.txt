@@ -1,0 +1,125 @@
+// <<<<<<<<<<<<<<<<<<<<<,, ProductDetailPage.jsx >>>>>>>>>>>>>>>>>>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+  {/* LEFT — IMAGE */}
+  <div className="w-full max-h-[70vh] rounded-xl overflow-hidden">
+    <img
+      src="https://images.unsplash.com/photo-1518443895471-4f1a5b2f5f8b"
+      alt="Product"
+      className="w-full h-full object-contain"
+    />
+  </div>
+
+  {/* RIGHT — PRODUCT INFO */}
+  <div>
+    {/* Category */}
+    <p className="text-sm text-gray-500 mb-1">Electronics</p>
+
+    <h1 className="text-4xl font-semibold text-gray-800">
+      Wireless Noise Cancelling Headphones
+    </h1>
+
+    {/* Price */}
+    <p className="text-3xl font-bold text-gray-900 my-4">
+      $129.99
+    </p>
+
+    {/* Stock */}
+    <p className="text-sm text-green-600 font-medium">
+      In stock
+    </p>
+
+    {/* Description */}
+    <div className="my-10">
+      <h2 className="text-xl font-semibold mb-3">Product Details</h2>
+      <p className="text-gray-700 leading-relaxed">
+        Experience premium sound quality with these wireless noise cancelling
+        headphones. Designed for comfort and long listening sessions, they
+        deliver deep bass, crisp highs, and long-lasting battery life for
+        everyday use.
+      </p>
+    </div>
+
+    {/* Quantity Selector + Add to Cart */}
+    <div className="flex items-center gap-4 my-6 flex-wrap">
+      <Button variant="outline" size="icon">
+        <Minus size={18} />
+      </Button>
+
+      <span className="font-medium text-lg">1</span>
+
+      <Button variant="outline" size="icon">
+        <Plus size={18} />
+      </Button>
+
+      <Button className="flex items-center gap-2">
+        <ShoppingCart size={18} />
+        Add to Cart
+      </Button>
+    </div>
+  </div>
+</div>
+
+{/* RELATED PRODUCTS */}
+<div className="mt-16">
+  <h2 className="text-2xl font-semibold mb-6">Related Products</h2>
+  <p className="text-gray-500">Coming soon…</p>
+</div>
+
+
+<<<<<<<<<<<<<<<< ProductDetailSkeleton.jsx >>>>>>>>>>>>>>>>>>>>>>>>
+import { Skeleton } from "@/components/ui/skeleton";
+import MaxWidthContainer from "../ui/maxwidthcontainer";
+
+const ProductDetailSkeleton = () => {
+  return (
+    <MaxWidthContainer className="my-8 md:my-10 lg:my-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* LEFT — IMAGE */}
+        <Skeleton className="w-full h-105 rounded-xl" />
+
+        {/* RIGHT — INFO */}
+        <div className="space-y-6">
+          {/* Category */}
+          <Skeleton className="h-4 w-32" />
+
+          {/* Title */}
+          <Skeleton className="h-10 w-3/4" />
+
+          {/* Price */}
+          <Skeleton className="h-8 w-40" />
+
+          {/* Stock */}
+          <Skeleton className="h-4 w-24" />
+
+          {/* Description */}
+          <div className="space-y-3 pt-6">
+            <Skeleton className="h-6 w-48" />
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-5/6" />
+          </div>
+
+          {/* Quantity + Button */}
+          <div className="flex items-center gap-4 pt-6">
+            <Skeleton className="h-10 w-10 rounded-md" />
+            <Skeleton className="h-6 w-10" />
+            <Skeleton className="h-10 w-10 rounded-md" />
+            <Skeleton className="h-10 w-40 rounded-xl ml-4" />
+          </div>
+        </div>
+      </div>
+
+      {/* RELATED PRODUCTS */}
+      <div className="mt-16 space-y-4">
+        <Skeleton className="h-8 w-56" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {[1, 2, 3, 4].map((i) => (
+            <Skeleton key={i} className="h-48 rounded-xl" />
+          ))}
+        </div>
+      </div>
+    </MaxWidthContainer>
+  );
+};
+
+export default ProductDetailSkeleton;

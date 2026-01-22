@@ -7,7 +7,7 @@ import { ShoppingCart } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <div className="border-b border-border py-4 bg-white sticky top-0">
+    <div className="border-b border-border py-4 bg-white sticky top-0 z-50">
       <MaxWidthContainer className="flex items-center justify-between">
         {/* logo */}
         <div className="flex gap-10 items-center">
